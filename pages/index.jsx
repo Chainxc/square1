@@ -305,22 +305,22 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='w-full bg-gradient-to-b from-transparent to-white/80 p-4 md:p-8'>
+          <div className='w-full bg-gradient-to-b from-transparent to-white p-4 md:p-8'>
             <div className='flex flex-wrap gap-2 justify-center'>
               <span className='text-center text-lg md:text-2xl lg:text-4xl text-black font-bold font-IBMPlex'>
-                เอกสารที่ต้องใช้ในการสมัคร
+                เอกสารที่ต้องใช้
               </span>
               <div className='w-full' />
-              <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 w-full max-w-7xl pt-4 px-8 gap-4'>
+              <div className='grid grid-cols-2 md:grid-cols-6 w-full max-w-7xl pt-4 px-8 gap-4'>
                 {doc.map((t, idx) => (
                   <div
                     className={
                       (idx < 3
                         ? 'md:col-span-2'
                         : idx === 4
-                        ? 'sm:col-span-2 md:col-span-3'
+                        ? 'col-span-2 md:col-span-3'
                         : 'md:col-span-3') +
-                      ' grid grid-rows-2 justify-items-center gap-y-4 hover:scale-105 transition-all duration-200 text-indigo-700 hover:text-indigo-900'
+                      ' grid grid-rows-2 justify-items-center gap-y-4 hover:scale-105 transition-all duration-200 text-pa hover:text-pb'
                     }
                     key={idx}
                   >
@@ -341,7 +341,7 @@ export default function Home() {
                 การแข่งขัน
               </span>
               <div className='w-full' />
-              <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 w-full max-w-7xl pt-4 px-8 gap-4'>
+              <div className='grid grid-cols-2 md:grid-cols-4 w-full max-w-7xl pt-4 px-8 gap-4'>
                 {ctInfo.map((t, idx) => (
                   <div
                     className='grid grid-rows-2 justify-items-center gap-y-4 hover:scale-105 transition-all duration-200 text-violet-300 hover:text-violet-100'
