@@ -61,7 +61,10 @@ export default function Home() {
           property='og:description'
           content='MWIT Square 14th | MWIT Open House 2022'
         ></meta>
-        <meta property='og:image' content='img/ogimage.png' />
+        <meta
+          property='og:image'
+          content='https://mwitsq.vercel.app/img/ogimage.png'
+        />
 
         <meta name='twitter:card' content='summary_large_image' />
         <meta property='twitter:domain' content='mwitsq.vercel.app' />
@@ -71,7 +74,10 @@ export default function Home() {
           name='twitter:description'
           content='MWIT Square 14th | MWIT Open House 2022'
         />
-        <meta name='twitter:image' content='img/ogimage.png' />
+        <meta
+          name='twitter:image'
+          content='https://mwitsq.vercel.app/img/ogimage.png'
+        />
 
         <link rel='icon' href='/favicon.ico' />
       </Head>
