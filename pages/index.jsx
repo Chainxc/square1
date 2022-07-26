@@ -7,7 +7,13 @@ import {
   faBook,
   faTrophy,
   faCalendarDay,
+  faFileLines,
+  faImagePortrait,
+  faIdCard,
+  faChalkboardTeacher,
+  faFileCircleCheck,
 } from '@fortawesome/free-solid-svg-icons'
+import { faFileWord, faFilePdf } from '@fortawesome/free-regular-svg-icons'
 
 const share = [
   {
@@ -53,6 +59,29 @@ const ctInfo = [
   {
     icon: faTrophy,
     text: 'ได้รับเกียรติบัตรและทุนการศึกษาสูงสุด 5,000 บาท',
+  },
+]
+
+const doc = [
+  {
+    icon: faFileLines,
+    text: 'ใบปพ.7 (ใบรับรองผลการศึกษา)',
+  },
+  {
+    icon: faImagePortrait,
+    text: 'รูปถ่ายนักเรียน',
+  },
+  {
+    icon: faIdCard,
+    text: 'รูปถ่ายบัตรนักเรียน',
+  },
+  {
+    icon: faChalkboardTeacher,
+    text: 'รูปอาจารย์ผู้คุมทีม',
+  },
+  {
+    icon: faFileCircleCheck,
+    text: 'เอกสารคำรับรองสถานศึกษา (ดาวน์โหลดแบบฟอร์มได้จากส่วนบนของเว็บไซต์)',
   },
 ]
 
@@ -205,7 +234,7 @@ export default function Home() {
                     target='_blank'
                     rel='noopener noreferrer'
                   >
-                    <img src='icon/wordicon.svg' className='w-4 md:w-6' />
+                    <FontAwesomeIcon icon={faFileWord} className='h-6' />
                     .docx
                   </a>
                 </li>
@@ -216,7 +245,7 @@ export default function Home() {
                     target='_blank'
                     rel='noopener noreferrer'
                   >
-                    <img src='icon/pdficon.svg' className='w-4 md:w-6' />
+                    <FontAwesomeIcon icon={faFilePdf} className='h-6' />
                     .pdf
                   </a>
                 </li>
@@ -271,6 +300,35 @@ export default function Home() {
               <span className='font-IBMPlexLoop text-sm md:text-base lg:text-xl'>
                 {'เปิดรับสมัคร 1 สิงหาคม 2565'}
               </span>
+            </div>
+          </div>
+
+          <div className='w-full bg-gradient-to-b from-transparent to-white/80 p-4 md:p-8'>
+            <div className='flex flex-wrap gap-2 justify-center'>
+              <span className='text-center text-lg md:text-2xl lg:text-4xl text-black font-bold font-IBMPlex'>
+                เอกสารที่ต้องใช้ในการสมัคร
+              </span>
+              <div className='w-full' />
+              <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 w-full max-w-7xl pt-4 px-8 gap-4'>
+                {doc.map((t, idx) => (
+                  <div
+                    className={
+                      (idx < 3
+                        ? 'md:col-span-2'
+                        : idx === 4
+                        ? 'sm:col-span-2 md:col-span-3'
+                        : 'md:col-span-3') +
+                      ' grid grid-rows-2 justify-items-center gap-y-4 hover:scale-105 transition-all duration-200 text-indigo-700 hover:text-indigo-900'
+                    }
+                    key={idx}
+                  >
+                    <FontAwesomeIcon icon={t.icon} className='h-16' />
+                    <div className='text-center text-sm md:text-base lg:text-xl font-IBMPlexLoop'>
+                      {t.text}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
           <div className='w-full bg-gradient-to-r from-pa to-pb p-4 md:p-8'>
