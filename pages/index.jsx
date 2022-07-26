@@ -117,8 +117,17 @@ export default function Home() {
         <div className='absolute'>
           <img className='w-full' src='img/covercrop.png' />
           <div className='flex flex-wrap justify-center space-y-2 pb-8'>
-            <div className='space-y-2 px-10 w-full max-w-md sm:max-w-lg'>
-              <button className='ds-btn ds-btn-sm ds-btn-primary font-IBMPlex font-bold md:ds-btn-md md:text-xl lg:ds-btn-lg lg:text-2xl space-x-2 w-full'>
+            <div className='space-y-2 w-full px-16 max-w-md sm:max-w-lg'>
+              <button
+                className='ds-btn ds-btn-sm ds-btn-primary font-IBMPlex font-bold md:ds-btn-md md:text-xl lg:ds-btn-lg lg:text-2xl space-x-2 w-full'
+                onClick={() =>
+                  window.open(
+                    'https://docs.google.com/forms/d/e/1FAIpQLSfg2IzgdYRoXcCwM1Llb9NgD_9D36O_H1i42UqtM9xG-NYCQg/viewform?usp=sf_link',
+                    '_blank',
+                    'noopener,noreferrer',
+                  )
+                }
+              >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   className='h-4 md:h-6'
@@ -136,7 +145,16 @@ export default function Home() {
                 <span>สมัครสอบ</span>
               </button>
               <div className='w-full' />
-              <button className='ds-btn ds-btn-sm ds-btn-secondary font-IBMPlex font-bold md:ds-btn-md md:text-xl lg:ds-btn-lg lg:text-2xl space-x-2 w-full'>
+              <button
+                className='ds-btn ds-btn-sm ds-btn-secondary font-IBMPlex font-bold md:ds-btn-md md:text-xl lg:ds-btn-lg lg:text-2xl space-x-2 w-full'
+                onClick={() =>
+                  window.open(
+                    'download/รายละเอียดการสอบ_MWIT_Square_14th.pdf',
+                    '_blank',
+                    'noopener,noreferrer',
+                  )
+                }
+              >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   className='h-4 md:h-6'
