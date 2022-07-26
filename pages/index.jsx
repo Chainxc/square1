@@ -65,7 +65,8 @@ const ctInfo = [
 const doc = [
   {
     icon: faFileLines,
-    text: 'ใบปพ.7 (ใบรับรองผลการศึกษา)',
+    text: 'ใบปพ.7',
+    desc: '(ใบรับรองผลการศึกษา)',
   },
   {
     icon: faImagePortrait,
@@ -81,7 +82,8 @@ const doc = [
   },
   {
     icon: faFileCircleCheck,
-    text: 'เอกสารคำรับรองสถานศึกษา (ดาวน์โหลดแบบฟอร์มได้จากส่วนบนของเว็บไซต์)',
+    text: 'เอกสารคำรับรองสถานศึกษา',
+    desc: '(ดาวน์โหลดแบบฟอร์มได้จากส่วนบนของเว็บไซต์)',
   },
 ]
 
@@ -325,6 +327,8 @@ export default function Home() {
                     <FontAwesomeIcon icon={t.icon} className='h-16' />
                     <div className='text-center text-sm md:text-base lg:text-xl font-IBMPlexLoop'>
                       {t.text}
+                      <br />
+                      {t?.desc}
                     </div>
                   </div>
                 ))}
