@@ -255,7 +255,7 @@ export default function Home() {
             </div>
             <div className='w-full' />
             <div className='max-w-xl pt-5 space-y-4 text-center'>
-              <span className='md:text-xl lg:text-2xl font-IBMPlex font-bold'>
+              <span className='text-xl md:text-2xl lg:text-4xl font-IBMPlex font-bold'>
                 เปิดรับสมัครในอีก
               </span>
               <div className='grid grid-cols-4 gap-2 pb-2'>
@@ -305,9 +305,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='w-full bg-gradient-to-b from-transparent to-white p-4 md:p-8'>
+          <div className='w-full bg-gradient-to-b from-transparent to-white py-4 md:p-8'>
             <div className='flex flex-wrap gap-2 justify-center'>
-              <span className='text-center text-lg md:text-2xl lg:text-4xl text-black font-bold font-IBMPlex'>
+              <span className='text-center text-xl md:text-2xl lg:text-4xl text-black font-bold font-IBMPlex'>
                 เอกสารที่ต้องใช้
               </span>
               <div className='w-full' />
@@ -335,9 +335,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className='w-full bg-gradient-to-r from-pa to-pb p-4 md:p-8'>
+          <div className='w-full bg-gradient-to-r from-pa to-pb py-4 md:p-8'>
             <div className='flex flex-wrap gap-2 justify-center'>
-              <span className='text-center text-lg md:text-2xl lg:text-4xl text-white font-bold font-IBMPlex'>
+              <span className='text-center text-xl md:text-2xl lg:text-4xl text-white font-bold font-IBMPlex'>
                 การแข่งขัน
               </span>
               <div className='w-full' />
