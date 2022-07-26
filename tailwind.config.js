@@ -12,6 +12,10 @@ module.exports = {
                 B612Mono: ["B612 Mono", "mono"]
                     // Kodchasan: ["Kodchasan", "sans-serif"]
             },
+            colors: {
+                pa: '#4c538b',
+                pb: '#a16f6c'
+            }
         },
     },
     plugins: [require("daisyui")],

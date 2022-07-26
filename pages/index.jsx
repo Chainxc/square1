@@ -1,6 +1,13 @@
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faPeopleGroup,
+  faBook,
+  faTrophy,
+  faCalendarDay,
+} from '@fortawesome/free-solid-svg-icons'
 
 const share = [
   {
@@ -27,6 +34,25 @@ const share = [
     icon: 'icon/globeicon.svg',
     href: 'https://mwit.ac.th',
     name: 'mwit.ac.th',
+  },
+]
+
+const ctInfo = [
+  {
+    icon: faCalendarDay,
+    text: 'แข่งขันวันเสาร์ที่ 27 สิงหาคม 2565 ในรูปแบบออนไลน์',
+  },
+  {
+    icon: faPeopleGroup,
+    text: 'แต่ละโรงเรียนส่งนักเรียนเข้าร่วมได้ไม่เกิน 2 ทีม ทีมละ 3 คน',
+  },
+  {
+    icon: faBook,
+    text: 'แข่งขันทั้งหมด 2 รอบ',
+  },
+  {
+    icon: faTrophy,
+    text: 'ได้รับเกียรติบัตรและทุนการศึกษาสูงสุด 5,000 บาท',
   },
 ]
 
@@ -84,14 +110,14 @@ export default function Home() {
 
       <main className='' data-theme='sq'>
         <img
-          className='fixed object-none object-left min-h-screen'
+          className='fixed object-none object-left min-h-full'
           src='img/coverbg.png'
         />
         <img className='absolute w-full' src='img/coverlogo.png' />
         <div className='absolute'>
           <img className='w-full' src='img/covercrop.png' />
           <div className='flex flex-wrap justify-center space-y-2 pb-8'>
-            <div className='max-w-xs space-y-2 px-4'>
+            <div className='space-y-2 px-10 w-full max-w-md sm:max-w-lg'>
               <button className='ds-btn ds-btn-sm ds-btn-primary font-IBMPlex font-bold md:ds-btn-md md:text-xl lg:ds-btn-lg lg:text-2xl space-x-2 w-full'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -109,7 +135,7 @@ export default function Home() {
                 </svg>
                 <span>สมัครสอบ</span>
               </button>
-              <div className='w-screen' />
+              <div className='w-full' />
               <button className='ds-btn ds-btn-sm ds-btn-secondary font-IBMPlex font-bold md:ds-btn-md md:text-xl lg:ds-btn-lg lg:text-2xl space-x-2 w-full'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -128,7 +154,7 @@ export default function Home() {
                 <span>รายละเอียดการสอบ</span>
               </button>
             </div>
-            <div className='w-screen' />
+            <div className='w-full' />
             <div className='ds-dropdown ds-dropdown-hover sm:ds-dropdown-right'>
               <label
                 tabIndex='0'
@@ -178,7 +204,7 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <div className='w-screen' />
+            <div className='w-full' />
             <div className='max-w-xl pt-5 space-y-4 text-center'>
               <span className='md:text-xl lg:text-2xl font-IBMPlex font-bold'>
                 เปิดรับสมัครในอีก
@@ -227,6 +253,27 @@ export default function Home() {
               <span className='font-IBMPlexLoop text-sm md:text-base lg:text-xl'>
                 {'เปิดรับสมัคร 1 สิงหาคม 2565'}
               </span>
+            </div>
+          </div>
+          <div className='w-full bg-gradient-to-r from-pa to-pb p-4 md:p-8'>
+            <div className='flex flex-wrap gap-2 justify-center'>
+              <span className='text-center text-lg md:text-2xl lg:text-4xl text-white font-bold font-IBMPlex'>
+                การแข่งขัน
+              </span>
+              <div className='w-full' />
+              <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 w-full max-w-7xl pt-4 px-8 gap-4'>
+                {ctInfo.map((t, idx) => (
+                  <div
+                    className='grid grid-rows-2 justify-items-center gap-y-4 hover:scale-105 transition-all duration-200 text-violet-300 hover:text-violet-100'
+                    key={idx}
+                  >
+                    <FontAwesomeIcon icon={t.icon} className='h-16' />
+                    <div className='text-center text-sm md:text-base lg:text-xl font-IBMPlexLoop'>
+                      {t.text}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
           <footer className='w-full bg-primary'>
