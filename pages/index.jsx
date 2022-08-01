@@ -167,12 +167,14 @@ export default function Home() {
               <button
                 className='ds-btn ds-btn-sm ds-btn-primary font-IBMPlex font-bold md:ds-btn-md md:text-xl lg:ds-btn-lg lg:text-2xl space-x-2 w-full'
                 onClick={() =>
+                  !endReg &&
                   window.open(
                     'https://docs.google.com/forms/d/e/1FAIpQLSfg2IzgdYRoXcCwM1Llb9NgD_9D36O_H1i42UqtM9xG-NYCQg/viewform?usp=sf_link',
                     '_blank',
                     'noopener,noreferrer',
                   )
                 }
+                disabled={endReg}
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
