@@ -90,14 +90,17 @@ const doc = [
 export default function Home() {
   const [remainTime, setRemainTime] = useState(0)
   const [baseUrl, setBaseUrl] = useState(null)
-  const endRegistTime = Date.parse('16 Aug 2022 23:59:59 GMT+7') - new Date()
-  const testTime = Date.parse('27 Aug 2022 08:00:00 GMT+7') - new Date()
+  const [endReg, setEndReg] = useState(false)
   const router = useRouter()
 
   useEffect(() => {
     setBaseUrl(window.location.origin)
     const timer = setInterval(() => {
-      setRemainTime(endRegistTime < 0 ? testTime : endRegistTime)
+      const endRegistTime =
+        Date.parse('16 Aug 2022 23:59:59 GMT+7') - new Date()
+      const testTime = Date.parse('27 Aug 2022 08:00:00 GMT+7') - new Date()
+      setRemainTime(endRegistTime >= 0 ? endRegistTime : testTime)
+      setEndReg(endRegistTime < 0)
     }, 100)
     return () => {
       clearInterval(timer)
@@ -257,9 +260,7 @@ export default function Home() {
             <div className='w-full' />
             <div className='max-w-xl pt-5 space-y-4 text-center'>
               <span className='text-xl md:text-2xl lg:text-4xl font-IBMPlex font-bold'>
-                {endRegistTime >= 0
-                  ? 'เหลือเวลารับสมัคร'
-                  : 'นับถอยหลังวันแข่งขัน'}
+                {!endReg ? 'เหลือเวลารับสมัคร' : 'นับถอยหลังวันแข่งขัน'}
               </span>
               <div className='grid grid-cols-4 gap-2 pb-2'>
                 <div className='bg-accent rounded-md text-center p-2'>
@@ -296,7 +297,7 @@ export default function Home() {
                 </div>
               </div>
               <span className='font-IBMPlexLoop text-sm md:text-base lg:text-xl'>
-                {endRegistTime >= 0
+                {!endReg
                   ? 'รับสมัครถึง 16 สิงหาคม 2565'
                   : 'แข่งขัน 27 สิงหาคม 2565'}
               </span>
