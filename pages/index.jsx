@@ -135,11 +135,11 @@ export default function Home() {
         ></meta>
         <meta
           property='og:image'
-          content='https://mwitsq.vercel.app/img/ogimage.png'
+          content='https://square.mwit.ac.th/img/ogimage.png'
         />
 
         <meta name='twitter:card' content='summary_large_image' />
-        <meta property='twitter:domain' content='mwitsq.vercel.app' />
+        <meta property='twitter:domain' content='square.mwit.ac.th' />
         {baseUrl && <meta property='twitter:url' content={baseUrl} />}
         <meta name='twitter:title' content='MWIT Square 14th' />
         <meta
@@ -148,7 +148,7 @@ export default function Home() {
         />
         <meta
           name='twitter:image'
-          content='https://mwitsq.vercel.app/img/ogimage.png'
+          content='https://square.mwit.ac.th/img/ogimage.png'
         />
 
         <link rel='icon' href='/favicon.ico' />
@@ -174,7 +174,8 @@ export default function Home() {
                     'noopener,noreferrer',
                   )
                 }
-                disabled={endReg}
+                // disabled={endReg}
+                disabled
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -195,16 +196,17 @@ export default function Home() {
               <div className='w-full' />
               <a
                 className='ds-btn ds-btn-sm ds-btn-secondary font-IBMPlex font-bold md:ds-btn-md md:text-xl lg:ds-btn-lg lg:text-2xl space-x-2 w-full'
-                // onClick={() =>
-                //   window.open(
-                //     'download/รายละเอียดการสอบ_MWIT_Square_14th.pdf',
-                //     '_blank',
-                //     'noopener,noreferrer',
-                //   )
-                // }
-                href='download/รายละเอียดการสอบ_MWIT_Square_14th.pdf'
-                target='_blank'
-                rel='noopener noreferrer'
+                onClick={() =>
+                  window.open(
+                    'download/รายละเอียดการสอบ_MWIT_Square_14th.pdf',
+                    '_blank',
+                    'noopener,noreferrer',
+                  )
+                }
+                disabled
+                // href='download/รายละเอียดการสอบ_MWIT_Square_14th.pdf'
+                // target='_blank'
+                // rel='noopener noreferrer'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -276,6 +278,9 @@ export default function Home() {
             <div className='w-full' />
             <div className='max-w-xl pt-5 space-y-4 text-center'>
               <span className='text-xl md:text-2xl lg:text-4xl font-IBMPlex font-bold'>
+                {'ติดตามการรับสมัครเร็ว ๆ นี้'}
+              </span>
+              {/* <span className='text-xl md:text-2xl lg:text-4xl font-IBMPlex font-bold'>
                 {!endReg ? 'เหลือเวลารับสมัคร' : 'นับถอยหลังวันแข่งขัน'}
               </span>
               <div className='grid grid-cols-4 gap-2 pb-2'>
@@ -316,7 +321,7 @@ export default function Home() {
                 {!endReg
                   ? 'รับสมัครถึง 16 สิงหาคม 2565'
                   : 'แข่งขัน 27 สิงหาคม 2565'}
-              </span>
+              </span> */}
             </div>
           </div>
 
