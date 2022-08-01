@@ -12,32 +12,43 @@ import {
   faIdCard,
   faChalkboardTeacher,
   faFileCircleCheck,
+  faEnvelope,
+  faEarthAsia,
 } from '@fortawesome/free-solid-svg-icons'
 import { faFileWord, faFilePdf } from '@fortawesome/free-regular-svg-icons'
+import {
+  faFacebook,
+  faFacebookMessenger,
+} from '@fortawesome/free-brands-svg-icons'
 
 const share = [
   {
-    icon: 'icon/facebookicon.svg',
+    icon: faFacebook,
     href: 'https://facebook.com/mwitsquare',
     name: 'MWIT Square',
   },
   {
-    icon: 'icon/facebookicon.svg',
-    href: 'https://facebook.com/MWITOpenHouse',
-    name: 'MWIT Open House',
+    icon: faFacebookMessenger,
+    href: 'https://m.me/mwitsquare',
+    name: 'MWIT Square',
   },
   {
-    icon: 'icon/emailicon.svg',
-    href: 'mailto:sc@mwit.ac.th',
-    name: 'sc@mwit.ac.th',
+    icon: faEnvelope,
+    href: 'mailto:square@mwit.ac.th',
+    name: 'square@mwit.ac.th',
   },
+  // {
+  //   icon: faFacebook,
+  //   href: 'https://facebook.com/MWITOpenHouse',
+  //   name: 'MWIT Open House',
+  // },
   {
-    icon: 'icon/globeicon.svg',
+    icon: faEarthAsia,
     href: 'https://openhouse.mwit.ac.th',
     name: 'openhouse.mwit.ac.th',
   },
   {
-    icon: 'icon/globeicon.svg',
+    icon: faEarthAsia,
     href: 'https://mwit.ac.th',
     name: 'mwit.ac.th',
   },
@@ -180,15 +191,18 @@ export default function Home() {
                 <span>สมัครสอบ</span>
               </button>
               <div className='w-full' />
-              <button
+              <a
                 className='ds-btn ds-btn-sm ds-btn-secondary font-IBMPlex font-bold md:ds-btn-md md:text-xl lg:ds-btn-lg lg:text-2xl space-x-2 w-full'
-                onClick={() =>
-                  window.open(
-                    'download/รายละเอียดการสอบ_MWIT_Square_14th.pdf',
-                    '_blank',
-                    'noopener,noreferrer',
-                  )
-                }
+                // onClick={() =>
+                //   window.open(
+                //     'download/รายละเอียดการสอบ_MWIT_Square_14th.pdf',
+                //     '_blank',
+                //     'noopener,noreferrer',
+                //   )
+                // }
+                href='download/รายละเอียดการสอบ_MWIT_Square_14th.pdf'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -205,7 +219,7 @@ export default function Home() {
                   />
                 </svg>
                 <span>รายละเอียดการสอบ</span>
-              </button>
+              </a>
             </div>
             <div className='w-full' />
             <div className='ds-dropdown ds-dropdown-hover sm:ds-dropdown-right'>
@@ -305,12 +319,12 @@ export default function Home() {
           </div>
 
           <div className='w-full bg-gradient-to-b from-transparent to-white py-4 md:p-8'>
-            <div className='flex flex-wrap gap-2 justify-center'>
+            <div className='flex flex-wrap mx-auto gap-2 justify-center'>
               <span className='text-center text-xl md:text-2xl lg:text-4xl text-black font-bold font-IBMPlex'>
                 เอกสารที่ต้องใช้
               </span>
               <div className='w-full' />
-              <div className='grid grid-cols-2 md:grid-cols-6 w-full max-w-7xl pt-4 px-8 gap-4'>
+              <div className='grid grid-cols-2 md:grid-cols-6 w-full max-w-5xl pt-4 px-8 gap-4 gap-y-8'>
                 {doc.map((t, idx) => (
                   <div
                     className={
@@ -319,11 +333,11 @@ export default function Home() {
                         : idx === 4
                         ? 'col-span-2 md:col-span-3'
                         : 'md:col-span-3') +
-                      ' grid grid-rows-2 justify-items-center gap-y-4 hover:scale-105 transition-all duration-200 text-pa hover:text-pb'
+                      ' grid grid-flow-row content-start justify-items-center gap-3 hover:scale-105 transition-all duration-200 text-pa hover:text-pb'
                     }
                     key={idx}
                   >
-                    <FontAwesomeIcon icon={t.icon} className='h-16' />
+                    <FontAwesomeIcon icon={t.icon} className='h-12' />
                     <div className='text-center text-sm md:text-base lg:text-xl font-IBMPlexLoop'>
                       {t.text}
                       <br />
@@ -343,10 +357,10 @@ export default function Home() {
               <div className='grid grid-cols-2 md:grid-cols-4 w-full max-w-7xl pt-4 px-8 gap-4'>
                 {ctInfo.map((t, idx) => (
                   <div
-                    className='grid grid-rows-2 justify-items-center gap-y-4 hover:scale-105 transition-all duration-200 text-violet-300 hover:text-violet-100'
+                    className='grid grid-flow-row content-start justify-items-center gap-3 hover:scale-105 transition-all duration-200 text-violet-300 hover:text-violet-100'
                     key={idx}
                   >
-                    <FontAwesomeIcon icon={t.icon} className='h-16' />
+                    <FontAwesomeIcon icon={t.icon} className='h-12' />
                     <div className='text-center text-sm md:text-base lg:text-xl font-IBMPlexLoop'>
                       {t.text}
                     </div>
@@ -359,18 +373,18 @@ export default function Home() {
             <div className='flex flex-wrap gap-4 p-4 items-center'>
               <img src='img/logo.png' className='h-12 pr-2' />
               {share.map((l, idx) => (
-                <div
+                <a
                   className='grid grid-flow-col auto-cols-max space-x-2 hover:scale-105 hover:cursor-pointer transition-all text-white hover:text-blue-300'
-                  onClick={() =>
-                    window.open(l.href, '_blank', 'noopener,noreferrer')
-                  }
+                  href={l.href}
+                  target='_blank'
+                  rel='noopener noreferrer'
                   key={idx}
                 >
-                  <img src={l.icon} className='h-4 md:h-5' />
+                  <FontAwesomeIcon icon={l.icon} className='h-4 md:h-5' />
                   <span className='self-center text-sm md:text-base font-IBMPlex font-semibold'>
                     {l.name}
                   </span>
-                </div>
+                </a>
               ))}
             </div>
           </footer>
