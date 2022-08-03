@@ -75,21 +75,13 @@ const ctInfo = [
 
 const doc = [
   {
-    icon: faFileLines,
-    text: 'ใบปพ.7',
-    desc: '(ใบรับรองผลการศึกษา)',
-  },
-  {
     icon: faImagePortrait,
     text: 'รูปถ่ายนักเรียน',
+    desc: 'และอาจารย์ผู้คุมทีม',
   },
   {
     icon: faIdCard,
     text: 'รูปถ่ายบัตรนักเรียน',
-  },
-  {
-    icon: faChalkboardTeacher,
-    text: 'รูปอาจารย์ผู้คุมทีม',
   },
   {
     icon: faFileCircleCheck,
@@ -124,14 +116,14 @@ export default function Home() {
         <title>MWIT Square 14th</title>
         <meta
           name='description'
-          content='MWIT Square 14th | MWIT Open House 2022'
+          content='MWIT Square 14th • การสอบแข่งขันคณิตศาสตร์และวิทยาศาสตร์ระหว่างโรงเรียนระดับมัธยมศึกษาตอนต้นประจำปี พ.ศ. 2565 | MWIT Open House 2022'
         />
         <meta property='og:title' content='MWIT Square 14th' />
         <meta property='og:type' content='website' />
         {baseUrl && <meta property='og:url' content={baseUrl} />}
         <meta
           property='og:description'
-          content='MWIT Square 14th | MWIT Open House 2022'
+          content='MWIT Square 14th • การสอบแข่งขันคณิตศาสตร์และวิทยาศาสตร์ระหว่างโรงเรียนระดับมัธยมศึกษาตอนต้นประจำปี พ.ศ. 2565 | MWIT Open House 2022'
         ></meta>
         <meta
           property='og:image'
@@ -144,7 +136,7 @@ export default function Home() {
         <meta name='twitter:title' content='MWIT Square 14th' />
         <meta
           name='twitter:description'
-          content='MWIT Square 14th | MWIT Open House 2022'
+          content='MWIT Square 14th • การสอบแข่งขันคณิตศาสตร์และวิทยาศาสตร์ระหว่างโรงเรียนระดับมัธยมศึกษาตอนต้นประจำปี พ.ศ. 2565 | MWIT Open House 2022'
         />
         <meta
           name='twitter:image'
@@ -163,9 +155,17 @@ export default function Home() {
         <div className='absolute'>
           <img className='w-full' src='img/covercrop.png' />
           <div className='flex flex-wrap justify-center space-y-2 pb-8'>
+            <div className='font-IBMPlex font-bold sm:text-lg md:text-xl lg:text-2xl xl:text-3xl pt-10 pb-2 max-w-4xl px-10 text-center flex flex-wrap justify-center'>
+              <span>การสอบแข่งขันคณิตศาสตร์</span>
+              <span>และวิทยาศาสตร์ระหว่างโรงเรียน</span>
+              <span className='text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl'>
+                ระดับมัธยมศึกษาตอนต้นประจำปี พ.ศ. 2565
+              </span>
+            </div>
+            <div className='w-full' />
             <div className='space-y-2 w-full px-16 max-w-md sm:max-w-lg'>
               <button
-                className='ds-btn ds-btn-sm ds-btn-primary font-IBMPlex font-bold md:ds-btn-md md:text-xl lg:ds-btn-lg lg:text-2xl space-x-2 w-full'
+                className='ds-btn ds-btn-sm ds-btn-primary hover:scale-105 transition-all duration-200 font-IBMPlex font-bold md:ds-btn-md md:text-xl lg:ds-btn-lg lg:text-2xl space-x-2 w-full'
                 onClick={() =>
                   !endReg &&
                   window.open(
@@ -174,8 +174,8 @@ export default function Home() {
                     'noopener,noreferrer',
                   )
                 }
-                // disabled={endReg}
-                disabled
+                disabled={endReg}
+                // disabled
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -195,7 +195,7 @@ export default function Home() {
               </button>
               <div className='w-full' />
               <a
-                className='ds-btn ds-btn-sm ds-btn-secondary font-IBMPlex font-bold md:ds-btn-md md:text-xl lg:ds-btn-lg lg:text-2xl space-x-2 w-full'
+                className='ds-btn ds-btn-sm ds-btn-secondary hover:scale-105 transition-all duration-200 font-IBMPlex font-bold md:ds-btn-md md:text-xl lg:ds-btn-lg lg:text-2xl space-x-2 w-full'
                 onClick={() =>
                   window.open(
                     'download/รายละเอียดการสอบ_MWIT_Square_14th.pdf',
@@ -203,10 +203,10 @@ export default function Home() {
                     'noopener,noreferrer',
                   )
                 }
-                disabled
-                // href='download/รายละเอียดการสอบ_MWIT_Square_14th.pdf'
-                // target='_blank'
-                // rel='noopener noreferrer'
+                // disabled
+                href='download/รายละเอียดการสอบ_MWIT_Square_14th.pdf'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -277,10 +277,10 @@ export default function Home() {
             </div>
             <div className='w-full' />
             <div className='max-w-xl pt-5 space-y-4 text-center'>
-              <span className='text-xl md:text-2xl lg:text-4xl font-IBMPlex font-bold'>
-                {'ติดตามการรับสมัครเร็ว ๆ นี้'}
-              </span>
               {/* <span className='text-xl md:text-2xl lg:text-4xl font-IBMPlex font-bold'>
+                {'ติดตามการรับสมัครเร็ว ๆ นี้'}
+              </span> */}
+              <span className='text-xl md:text-2xl lg:text-4xl font-IBMPlex font-bold'>
                 {!endReg ? 'เหลือเวลารับสมัคร' : 'นับถอยหลังวันแข่งขัน'}
               </span>
               <div className='grid grid-cols-4 gap-2 pb-2'>
@@ -321,7 +321,7 @@ export default function Home() {
                 {!endReg
                   ? 'รับสมัครถึง 16 สิงหาคม 2565'
                   : 'แข่งขัน 27 สิงหาคม 2565'}
-              </span> */}
+              </span>
             </div>
           </div>
 
@@ -331,15 +331,11 @@ export default function Home() {
                 เอกสารที่ต้องใช้
               </span>
               <div className='w-full' />
-              <div className='grid grid-cols-2 md:grid-cols-6 w-full max-w-5xl pt-4 px-8 gap-4 gap-y-8'>
+              <div className='grid grid-cols-2 md:grid-cols-3 w-full max-w-4xl pt-4 px-8 gap-4 gap-y-8'>
                 {doc.map((t, idx) => (
                   <div
                     className={
-                      (idx < 3
-                        ? 'md:col-span-2'
-                        : idx === 4
-                        ? 'col-span-2 md:col-span-3'
-                        : 'md:col-span-3') +
+                      (idx === 2 && 'col-span-2 md:col-span-1') +
                       ' grid grid-flow-row content-start justify-items-center gap-3 hover:scale-105 transition-all duration-200 text-pa hover:text-pb'
                     }
                     key={idx}
