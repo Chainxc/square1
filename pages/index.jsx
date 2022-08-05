@@ -65,7 +65,7 @@ const ctInfo = [
   },
   {
     icon: faBook,
-    text: 'แข่งขันทั้งหมด 2 รอบ',
+    text: 'แข่งขันทั้งหมด 2 รอบ ได้แก่ รอบคัดเลือก และรอบชิงชนะเลิศ',
   },
   {
     icon: faTrophy,
@@ -77,7 +77,7 @@ const doc = [
   {
     icon: faImagePortrait,
     text: 'รูปถ่ายนักเรียน',
-    desc: 'และอาจารย์ผู้คุมทีม',
+    desc: 'และรูปอาจารย์ผู้คุมทีม',
   },
   {
     icon: faIdCard,
@@ -92,12 +92,10 @@ const doc = [
 
 export default function Home() {
   const [remainTime, setRemainTime] = useState(0)
-  const [baseUrl, setBaseUrl] = useState(null)
   const [endReg, setEndReg] = useState(false)
   const router = useRouter()
 
   useEffect(() => {
-    setBaseUrl(window.location.origin)
     const timer = setInterval(() => {
       const endRegistTime =
         Date.parse('16 Aug 2022 23:59:59 GMT+7') - new Date()
@@ -111,41 +109,10 @@ export default function Home() {
   }, [])
 
   return (
-    <div className=''>
+    <>
       <Head>
         <title>MWIT Square 14th</title>
-        <meta
-          name='description'
-          content='MWIT Square 14th • การสอบแข่งขันคณิตศาสตร์และวิทยาศาสตร์ระหว่างโรงเรียนระดับมัธยมศึกษาตอนต้นประจำปี พ.ศ. 2565 | MWIT Open House 2022'
-        />
-        <meta property='og:title' content='MWIT Square 14th' />
-        <meta property='og:type' content='website' />
-        {baseUrl && <meta property='og:url' content={baseUrl} />}
-        <meta
-          property='og:description'
-          content='MWIT Square 14th • การสอบแข่งขันคณิตศาสตร์และวิทยาศาสตร์ระหว่างโรงเรียนระดับมัธยมศึกษาตอนต้นประจำปี พ.ศ. 2565 | MWIT Open House 2022'
-        ></meta>
-        <meta
-          property='og:image'
-          content='https://square.mwit.ac.th/img/ogimage.png'
-        />
-
-        <meta name='twitter:card' content='summary_large_image' />
-        <meta property='twitter:domain' content='square.mwit.ac.th' />
-        {baseUrl && <meta property='twitter:url' content={baseUrl} />}
-        <meta name='twitter:title' content='MWIT Square 14th' />
-        <meta
-          name='twitter:description'
-          content='MWIT Square 14th • การสอบแข่งขันคณิตศาสตร์และวิทยาศาสตร์ระหว่างโรงเรียนระดับมัธยมศึกษาตอนต้นประจำปี พ.ศ. 2565 | MWIT Open House 2022'
-        />
-        <meta
-          name='twitter:image'
-          content='https://square.mwit.ac.th/img/ogimage.png'
-        />
-
-        <link rel='icon' href='/favicon.ico' />
       </Head>
-
       <main className='' data-theme='sq'>
         <img
           className='fixed object-none object-left h-full'
@@ -196,13 +163,13 @@ export default function Home() {
               <div className='w-full' />
               <a
                 className='ds-btn ds-btn-sm ds-btn-secondary hover:scale-105 transition-all duration-200 font-IBMPlex font-bold md:ds-btn-md md:text-xl lg:ds-btn-lg lg:text-2xl space-x-2 w-full'
-                onClick={() =>
-                  window.open(
-                    'download/รายละเอียดการสอบ_MWIT_Square_14th.pdf',
-                    '_blank',
-                    'noopener,noreferrer',
-                  )
-                }
+                // onClick={() =>
+                //   window.open(
+                //     'download/รายละเอียดการสอบ_MWIT_Square_14th.pdf',
+                //     '_blank',
+                //     'noopener,noreferrer',
+                //   )
+                // }
                 // disabled
                 href='download/รายละเอียดการสอบ_MWIT_Square_14th.pdf'
                 target='_blank'
@@ -372,27 +339,41 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <footer className='w-full bg-primary'>
-            <div className='flex flex-wrap gap-4 p-4 items-center'>
-              <img src='img/logo.png' className='h-12 pr-2' />
-              {share.map((l, idx) => (
-                <a
-                  className='grid grid-flow-col auto-cols-max space-x-2 hover:scale-105 hover:cursor-pointer transition-all text-white hover:text-blue-300'
-                  href={l.href}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  key={idx}
-                >
-                  <FontAwesomeIcon icon={l.icon} className='h-4 md:h-5' />
-                  <span className='self-center text-sm md:text-base font-IBMPlex font-semibold'>
-                    {l.name}
-                  </span>
-                </a>
-              ))}
+          <footer className='w-full bg-primary p-4 flex flex-wrap items-center gap-2'>
+            <img src='img/logo.png' className='h-12 pr-2' />
+            <div className='flex flex-col gap-2'>
+              <div className='flex flex-wrap gap-x-4 gap-y-1 items-center'>
+                {share.map((l, idx) => (
+                  <a
+                    className='grid grid-flow-col auto-cols-max space-x-2 hover:scale-105 hover:cursor-pointer transition-all text-white hover:text-blue-300'
+                    href={l.href}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    key={idx}
+                  >
+                    <FontAwesomeIcon icon={l.icon} className='h-4 md:h-5' />
+                    <span className='self-center text-sm md:text-base font-IBMPlex font-semibold'>
+                      {l.name}
+                    </span>
+                  </a>
+                ))}
+              </div>
+              <div className='font-IBMPlexLoop text-xs md:text-sm flex flex-wrap gap-x-2'>
+                <span className='text-white'>
+                  คณะกรรมการสภานักเรียนฝ่ายวิชาการ
+                </span>
+                <span className='text-blue-200'>
+                  โรงเรียนมหิดลวิทยานุสรณ์ 364 หมู่ 5 ต.ศาลายา อ.พุทธมณฑล
+                  จ.นครปฐม 73170
+                </span>
+              </div>
+              {/* <div className='font-IBMPlex text-blue-200 text-xs flex flex-wrap gap-x-2'>
+                {'Designed by Trisawan & Created by Patcharapon.'}
+              </div> */}
             </div>
           </footer>
         </div>
       </main>
-    </div>
+    </>
   )
 }
