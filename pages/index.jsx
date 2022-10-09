@@ -7,19 +7,25 @@ import {
   faBook,
   faTrophy,
   faCalendarDay,
-  faFileLines,
   faImagePortrait,
   faIdCard,
   faChalkboardTeacher,
   faFileCircleCheck,
   faEnvelope,
   faEarthAsia,
+  faClipboardCheck,
+  faFileInvoice,
 } from '@fortawesome/free-solid-svg-icons'
-import { faFileWord, faFilePdf } from '@fortawesome/free-regular-svg-icons'
+import {
+  faFileWord,
+  faFilePdf,
+  faFileLines,
+} from '@fortawesome/free-regular-svg-icons'
 import {
   faFacebook,
   faFacebookMessenger,
 } from '@fortawesome/free-brands-svg-icons'
+import Link from 'next/link'
 
 const share = [
   {
@@ -90,6 +96,56 @@ const doc = [
   },
 ]
 
+const awardList = [
+  {
+    name: 'รางวัลชนะเลิศ',
+    sub: 'ทุนการศึกษา 5,000 บาท',
+    std: [
+      'เด็กหญิงพิชชาญาณ์ เพชรศรีทอง',
+      'เด็กหญิงฐิติธรณ์ สุวรรณนิตย์',
+      'เด็กหญิงสุทธิกมล ศรีทองสุข',
+    ],
+    school: 'โรงเรียนธิดานุเคราะห์',
+    img: '/img/1st.jpg',
+  },
+  {
+    name: 'รางวัลรองชนะเลิศอันดับ 1',
+    sub: 'ทุนการศึกษา 3,000 บาท',
+    std: [
+      'เด็กชายกศิเดช วิสัยชนม์',
+      'เด็กชายภูริพัฒน์ บุญชู',
+      'เด็กชายอัฐ วนศิริพงศ์',
+    ],
+    school: 'โรงเรียนแสงทองวิทยา',
+    img: '/img/2nd.jpg',
+  },
+  {
+    name: 'รางวัลรองชนะเลิศอันดับ 2',
+    sub: 'ทุนการศึกษา 2,000 บาท',
+    std: [
+      'เด็กหญิงกัญญ์ณพัชร์ ลาภณรงค์ชัย',
+      'เด็กหญิงชนัญชิดา สุขไชยะ',
+      'เด็กหญิงภัคธดา พิธาวราธร',
+    ],
+    school: 'โรงเรียนธิดานุเคราะห์',
+    img: '/img/3rd.jpg',
+  },
+]
+
+const firstResult = [
+  ['ทีม', 'โรงเรียน'],
+  ['M16A', 'ธิดานุเคราะห์'],
+  ['M16B', 'ธิดานุเคราะห์'],
+  ['M32B', 'มงฟอร์ตวิทยาลัย แผนกมัธยม'],
+  ['M39A', 'ราชสีมาวิทยาลัย'],
+  ['M60A', 'สาธิตจุฬาลงกรณ์มหาวิทยาลัย ฝ่ายมัธยม'],
+  ['M63A', 'สาธิตมหาวิทยาลัยศรีนครินทรวิโรฒ ปทุมวัน'],
+  ['M63B', 'สาธิตมหาวิทยาลัยศรีนครินทรวิโรฒ ปทุมวัน'],
+  ['M72A', 'แสงทองวิทยา'],
+  ['M72B', 'แสงทองวิทยา'],
+  ['M74A', 'หาดใหญ่วิทยาลัย'],
+]
+
 export default function Home() {
   const [remainTime, setRemainTime] = useState(0)
   const [endReg, setEndReg] = useState(false)
@@ -121,7 +177,7 @@ export default function Home() {
         <img className='absolute w-full' src='img/coverlogo.png' />
         <div className='absolute'>
           <img className='w-full' src='img/covercrop.png' />
-          <div className='flex flex-wrap justify-center space-y-2 pb-8'>
+          <div className='flex flex-col items-center justify-center space-y-2 pb-8'>
             <div className='font-IBMPlex font-bold sm:text-lg md:text-xl lg:text-2xl xl:text-3xl pt-10 pb-2 max-w-4xl px-10 text-center flex flex-wrap justify-center'>
               <span>การสอบแข่งขันคณิตศาสตร์</span>
               <span>และวิทยาศาสตร์ระหว่างโรงเรียน</span>
@@ -129,66 +185,47 @@ export default function Home() {
                 ระดับมัธยมศึกษาตอนต้นประจำปี พ.ศ. 2565
               </span>
             </div>
-            <div className='w-full' />
-            <div className='space-y-2 w-full px-16 max-w-md sm:max-w-lg'>
-              <button
-                className='ds-btn ds-btn-sm ds-btn-primary hover:scale-105 transition-all duration-200 font-IBMPlex font-bold md:ds-btn-md md:text-xl lg:ds-btn-lg lg:text-2xl space-x-2 w-full'
-                onClick={() =>
-                  !endReg &&
-                  window.open(
-                    'https://docs.google.com/forms/d/e/1FAIpQLSfg2IzgdYRoXcCwM1Llb9NgD_9D36O_H1i42UqtM9xG-NYCQg/viewform?usp=sf_link',
-                    '_blank',
-                    'noopener,noreferrer',
-                  )
-                }
-                disabled={endReg}
-                // disabled
-              >
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  className='h-4 md:h-6'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  stroke='currentColor'
-                  strokeWidth={2}
+            <div className='w-full px-4 flex flex-col items-center gap-2 md:gap-4'>
+              <div className='flex flex-wrap gap-2 md:gap-4 justify-center md:mt-2'>
+                <Link
+                  href={
+                    'download/ระเบียบการสอบ_MWIT_Square_14th_และคู่มือการใช้งานโปรแกรม_Google.pdf'
+                  }
                 >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    d='M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z'
-                  />
-                </svg>
-                <span>สมัครสอบ</span>
-              </button>
-              <div className='w-full' />
+                  <a
+                    className='relative ds-btn ds-btn-sm text-white bg-gradient-to-r from-pa to-pb hover:scale-105 transition-all duration-200 font-IBMPlex font-semibold md:ds-btn-md md:text-xl lg:ds-btn-lg lg:text-2xl space-x-2'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    <FontAwesomeIcon icon={faFileInvoice} />
+                    <span>ระเบียบการสอบ</span>
+                    <div className='absolute rotate-[5deg] -right-2 md:-right-3 -top-3 text-[0.65rem] md:text-sm lg:text-[0.95rem] py-[0.15rem] sm:py-1 px-2 rounded-full text-white bg-primary'>
+                      NEW!
+                    </div>
+                  </a>
+                </Link>
+                <Link
+                  href={
+                    'download/รายชื่อผู้มีสิทธิ์เข้าแข่งขัน_MWIT_Square_14th.pdf'
+                  }
+                >
+                  <a
+                    className='ds-btn ds-btn-sm ds-btn-primary hover:scale-105 transition-all duration-200 font-IBMPlex font-bold md:ds-btn-md md:text-xl lg:ds-btn-lg lg:text-2xl space-x-2'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    <FontAwesomeIcon icon={faClipboardCheck} />
+                    <span>รายชื่อผู้มีสิทธิ์เข้าแข่งขัน</span>
+                  </a>
+                </Link>
+              </div>
               <a
-                className='ds-btn ds-btn-sm ds-btn-secondary hover:scale-105 transition-all duration-200 font-IBMPlex font-bold md:ds-btn-md md:text-xl lg:ds-btn-lg lg:text-2xl space-x-2 w-full'
-                // onClick={() =>
-                //   window.open(
-                //     'download/รายละเอียดการสอบ_MWIT_Square_14th.pdf',
-                //     '_blank',
-                //     'noopener,noreferrer',
-                //   )
-                // }
-                // disabled
+                className='ds-btn ds-btn-sm ds-btn-secondary hover:scale-105 transition-all duration-200 font-IBMPlex font-bold md:ds-btn-md md:text-xl lg:ds-btn-lg lg:text-2xl space-x-2'
                 href='download/รายละเอียดการสอบ_MWIT_Square_14th.pdf'
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  className='h-4 md:h-6'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  stroke='currentColor'
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'
-                  />
-                </svg>
+                <FontAwesomeIcon icon={faFileLines} />
                 <span>รายละเอียดการสอบ</span>
               </a>
             </div>
@@ -243,14 +280,40 @@ export default function Home() {
               </ul>
             </div>
             <div className='w-full' />
-            <div className='max-w-xl pt-5 space-y-4 text-center'>
+            <div className='max-w-7xl pt-5 px-4 space-y-4 text-center'>
               {/* <span className='text-xl md:text-2xl lg:text-4xl font-IBMPlex font-bold'>
                 {'ติดตามการรับสมัครเร็ว ๆ นี้'}
               </span> */}
               <span className='text-xl md:text-2xl lg:text-4xl font-IBMPlex font-bold'>
-                {!endReg ? 'เหลือเวลารับสมัคร' : 'นับถอยหลังวันแข่งขัน'}
+                ผลการแข่งขันรอบชิงชนะเลิศ
               </span>
-              <div className='grid grid-cols-4 gap-2 pb-2'>
+              <div className='w-full flex flex-wrap gap-4 items-center justify-center'>
+                {awardList.map((a, ai) => (
+                  <div
+                    key={ai}
+                    className='flex flex-col w-full max-w-sm shadow-lg bg-white hover:bg-gray-200 transition-all duration-300 rounded-xl overflow-hidden'
+                  >
+                    <img src={a.img} className='w-full' />
+                    <div className='flex flex-col py-3 px-5'>
+                      <span className='font-IBMPlex font-semibold self-center text-xl md:text-2xl whitespace-nowrap'>
+                        {a.name}
+                      </span>
+                      <span className='font-IBMPlex font-medium self-center text-base md:text-lg'>
+                        {a.sub}
+                      </span>
+                      <ol className='list-decimal list-inside mt-2 font-IBMPlexLoop text-base md:text-lg self-start text-start'>
+                        {a.std.map((m, mi) => (
+                          <li key={mi}>{m}</li>
+                        ))}
+                      </ol>
+                      <span className='font-IBMPlexLoop self-start text-sm md:text-base mt-1'>
+                        {a.school}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              {/* <div className='grid grid-cols-4 gap-2 pb-2'>
                 <div className='bg-accent rounded-md text-center p-2'>
                   <div className='font-B612Mono text-2xl md:text-4xl'>
                     {Math.floor(remainTime / (1000 * 60 * 60 * 24))}
@@ -288,7 +351,40 @@ export default function Home() {
                 {!endReg
                   ? 'รับสมัครถึง 16 สิงหาคม 2565'
                   : 'แข่งขัน 27 สิงหาคม 2565'}
+              </span> */}
+            </div>
+            <div className='max-w-7xl pt-5 px-4 space-y-4 text-center'>
+              <span className='text-xl md:text-2xl lg:text-4xl font-IBMPlex font-bold'>
+                ผลการแข่งขันรอบแรก
               </span>
+              <table className='table-auto font-IBMPlexLoop w-fit self-center text-start bg-white rounded-xl overflow-hidden shadow-lg'>
+                <thead className='border-b-2 border-b-gray-400 text-base md:text-lg'>
+                  <tr>
+                    {firstResult[0].map((h, hi) => (
+                      <th key={hi} className='px-2'>
+                        {h}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody className='text-sm md:text-base'>
+                  {firstResult.map(
+                    (t, ti) =>
+                      ti > 0 && (
+                        <tr
+                          key={ti}
+                          className='border-b border-gray-300 hover:bg-gray-200/80 transition-colors duration-200'
+                        >
+                          {t.map((ct, cti) => (
+                            <td key={cti} className='py-1 px-2'>
+                              {ct}
+                            </td>
+                          ))}
+                        </tr>
+                      ),
+                  )}
+                </tbody>
+              </table>
             </div>
           </div>
 
