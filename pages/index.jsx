@@ -63,7 +63,7 @@ const share = [
 const ctInfo = [
   {
     icon: faCalendarDay,
-    text: 'แข่งขันวันเสาร์ที่ 27 สิงหาคม 2565 ในรูปแบบออนไลน์',
+    text: 'แข่งขันวันเสาร์ที่ 25 สิงหาคม 2565 ในรูปแบบออนไซต์',
   },
   {
     icon: faPeopleGroup,
@@ -281,10 +281,10 @@ export default function Home() {
             </div>
             <div className='w-full' />
             <div className='max-w-7xl pt-5 px-4 space-y-4 text-center'>
-              {/* <span className='text-xl md:text-2xl lg:text-4xl font-IBMPlex font-bold'>
-                {'ติดตามการรับสมัครเร็ว ๆ นี้'}
-              </span> */}
               <span className='text-xl md:text-2xl lg:text-4xl font-IBMPlex font-bold'>
+                {'ติดตามการรับสมัครเร็ว ๆ นี้'}
+              </span>
+              {/*<span className='text-xl md:text-2xl lg:text-4xl font-IBMPlex font-bold'>
                 ผลการแข่งขันรอบชิงชนะเลิศ
               </span>
               <div className='w-full flex flex-wrap gap-4 items-center justify-center'>
@@ -312,8 +312,8 @@ export default function Home() {
                     </div>
                   </div>
                 ))}
-              </div>
-              {/* <div className='grid grid-cols-4 gap-2 pb-2'>
+              </div>*/}
+              <div className='grid grid-cols-4 gap-2 pb-2'>
                 <div className='bg-accent rounded-md text-center p-2'>
                   <div className='font-B612Mono text-2xl md:text-4xl'>
                     {Math.floor(remainTime / (1000 * 60 * 60 * 24))}
@@ -351,9 +351,9 @@ export default function Home() {
                 {!endReg
                   ? 'รับสมัครถึง 16 สิงหาคม 2565'
                   : 'แข่งขัน 27 สิงหาคม 2565'}
-              </span> */}
+              </span>
             </div>
-            <div className='max-w-7xl pt-5 px-4 space-y-4 text-center'>
+            {/*<div className='max-w-7xl pt-5 px-4 space-y-4 text-center'>
               <span className='text-xl md:text-2xl lg:text-4xl font-IBMPlex font-bold'>
                 ผลการแข่งขันรอบแรก
               </span>
@@ -385,7 +385,7 @@ export default function Home() {
                   )}
                 </tbody>
               </table>
-            </div>
+              </div>*/}
           </div>
 
           <div className='w-full bg-gradient-to-b from-transparent to-white py-4 md:p-8'>
