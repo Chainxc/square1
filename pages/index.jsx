@@ -349,8 +349,8 @@ export default function Home() {
               </div>
               <span className='font-IBMPlexLoop text-sm md:text-base lg:text-xl'>
                 {!endReg
-                  ? 'รับสมัครถึง 16 สิงหาคม 2565'
-                  : 'แข่งขัน 27 สิงหาคม 2565'}
+                  ? 'รับสมัครถึง 16 สิงหาคม 2566'
+                  : 'แข่งขัน 26 สิงหาคม 2566'}
               </span>
             </div>
             {/*<div className='max-w-7xl pt-5 px-4 space-y-4 text-center'>
