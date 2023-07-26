@@ -154,8 +154,8 @@ export default function Home() {
   useEffect(() => {
     const timer = setInterval(() => {
       const endRegistTime =
-        Date.parse('16 Aug 2022 23:59:59 GMT+7') - new Date()
-      const testTime = Date.parse('27 Aug 2022 08:00:00 GMT+7') - new Date()
+        Date.parse('16 Aug 2023 23:59:59 GMT+7') - new Date()
+      const testTime = Date.parse('26 Aug 2023 08:00:00 GMT+7') - new Date()
       setRemainTime(endRegistTime >= 0 ? endRegistTime : testTime)
       setEndReg(endRegistTime < 0)
     }, 100)
@@ -182,7 +182,7 @@ export default function Home() {
               <span>การสอบแข่งขันคณิตศาสตร์</span>
               <span>และวิทยาศาสตร์ระหว่างโรงเรียน</span>
               <span className='text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl'>
-                ระดับมัธยมศึกษาตอนต้นประจำปี พ.ศ. 2565
+                ระดับมัธยมศึกษาตอนต้นประจำปี พ.ศ. 2566
               </span>
             </div>
             <div className='w-full px-4 flex flex-col items-center gap-2 md:gap-4'>
@@ -215,7 +215,7 @@ export default function Home() {
                     rel='noopener noreferrer'
                   >
                     <FontAwesomeIcon icon={faClipboardCheck} />
-                    <span>รายชื่อผู้มีสิทธิ์เข้าแข่งขัน</span>
+                    <span>ลงทะเบียนเข้าแข่งขัน</span>
                   </a>
                 </Link>
               </div>
