@@ -171,8 +171,8 @@ export default function Home() {
       </Head>
       <main className='' data-theme='sq'>
         <img
-          className='fixed object-none object-left h-full'
-          src='img/coverbg.png'
+          className='fixed object-none object-center h-full'
+          src='img/SQ15-col.png'
         />
         <img className='absolute w-full' src='img/coverlogo.png' />
         <div className='absolute'>
@@ -436,7 +436,7 @@ export default function Home() {
             </div>
           </div>
           <footer className='w-full bg-primary p-4 flex flex-wrap items-center gap-2'>
-            <img src='img/logo.png' className='h-12 pr-2' />
+            <img src='img/SQ15-col.png'className='h-12 pr-2' />
             <div className='flex flex-col gap-2'>
               <div className='flex flex-wrap gap-x-4 gap-y-1 items-center'>
                 {share.map((l, idx) => (
