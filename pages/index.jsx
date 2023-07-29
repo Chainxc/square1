@@ -438,7 +438,7 @@ export default function Home() {
             </div>
           </div>
           <footer className='w-full bg-primary p-4 flex flex-wrap items-center gap-2'>
-            <img src='img/logo.png' className='h-12 pr-2' />
+            <img src='img/SQ15-white.png' className='h-12 pr-2' />
             <div className='flex flex-col gap-2'>
               <div className='flex flex-wrap gap-x-4 gap-y-1 items-center'>
                 {share.map((l, idx) => (
