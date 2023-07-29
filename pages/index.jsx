@@ -170,7 +170,7 @@ export default function Home() {
         <title>MWIT Square 14th</title>
       </Head>
       <main className='' data-theme='sq'>
-        <div className='  w-full bg-ybg/50 absolute h-[calc(100vh-calc(100vh-100%))]'
+        <div className='fixed object-none object-left h-full'
         style={{
           backgroundImage: 'img/coverbg.png',}}  
         >
@@ -434,7 +434,7 @@ export default function Home() {
             </div>
           </div>
           <footer className='w-full bg-primary p-4 flex flex-wrap items-center gap-2'>
-            <img src='img/logo.png' className='h-12 pr-2' />
+            <img src='img/SQ15-white.png' className='h-12 pr-2' />
             <div className='flex flex-col gap-2'>
               <div className='flex flex-wrap gap-x-4 gap-y-1 items-center'>
                 {share.map((l, idx) => (
