@@ -170,13 +170,11 @@ export default function Home() {
         <title>MWIT Square 14th</title>
       </Head>
       <main className='' data-theme='sq'>
-        <img
-          className='fixed object-none object-left h-full'
-          src='img/coverbg.png'
-        />
-        <img className='absolute w-full' src='img/SQ15-col.png' />
-        <div className='absolute'>
-          <img className='w-full' src='img/covercrop.png' />
+        <div className='  w-full bg-ybg/50 absolute h-[calc(100vh-calc(100vh-100%))]'
+        style={{
+          backgroundImage: 'img/coverbg.png',}}  
+        >
+          <img className='w-auto' src='img/SQ15-col.png'/>
           <div className='flex flex-col items-center justify-center space-y-2 pb-8'>
             <div className='font-IBMPlex font-bold sm:text-lg md:text-xl lg:text-2xl xl:text-3xl pt-10 pb-2 max-w-4xl px-10 text-center flex flex-wrap justify-center'>
               <span>การสอบแข่งขันคณิตศาสตร์</span>
