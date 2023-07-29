@@ -175,7 +175,7 @@ export default function Home() {
           src='img/coverbg.png'
         />
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-          <img className='w-1/2 h-1/2' src='img/SQ15-col.png' />/
+          <img className='' src='img/SQ15-col.png' />/
         </div> 
         <div className='absolute'>
           <img className='w-full' src='img/covercrop.png' />
