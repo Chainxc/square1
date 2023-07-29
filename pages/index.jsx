@@ -282,7 +282,7 @@ export default function Home() {
             <div className='w-full' />
             <div className='max-w-7xl pt-5 px-4 space-y-4 text-center'>
               <span className='text-xl md:text-2xl lg:text-4xl font-IBMPlex font-bold'>
-                {'ติดตามการรับสมัครเร็ว ๆ นี้'}
+                {'สมัครได้ถึงวันที่'}
               </span>
               {/*<span className='text-xl md:text-2xl lg:text-4xl font-IBMPlex font-bold'>
                 ผลการแข่งขันรอบชิงชนะเลิศ
