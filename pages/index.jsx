@@ -171,10 +171,10 @@ export default function Home() {
       </Head>
       <main className='' data-theme='sq'>
         <img
-          className='fixed object-none object-center h-full'
-          src='img/SQ15-col.png'
+          className='fixed object-none object-left h-full'
+          src='img/coverbg.png'
         />
-        <img className='absolute w-full' src='img/coverlogo.png' />
+        <img className='absolute w-full' src='img/SQ15-col.png' />
         <div className='absolute'>
           <img className='w-full' src='img/covercrop.png' />
           <div className='flex flex-col items-center justify-center space-y-2 pb-8'>
@@ -282,7 +282,7 @@ export default function Home() {
             <div className='w-full' />
             <div className='max-w-7xl pt-5 px-4 space-y-4 text-center'>
               <span className='text-xl md:text-2xl lg:text-4xl font-IBMPlex font-bold'>
-                {'สมัครได้ถึงวันที่'}
+                {'สมัครได้อีก'}
               </span>
               {/*<span className='text-xl md:text-2xl lg:text-4xl font-IBMPlex font-bold'>
                 ผลการแข่งขันรอบชิงชนะเลิศ
@@ -436,7 +436,7 @@ export default function Home() {
             </div>
           </div>
           <footer className='w-full bg-primary p-4 flex flex-wrap items-center gap-2'>
-            <img src='img/SQ15-col.png'className='h-12 pr-2' />
+            <img src='img/logo.png' className='h-12 pr-2' />
             <div className='flex flex-col gap-2'>
               <div className='flex flex-wrap gap-x-4 gap-y-1 items-center'>
                 {share.map((l, idx) => (
