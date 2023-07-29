@@ -177,6 +177,7 @@ export default function Home() {
         <img className='absolute w-fit' src='img/SQ15-col.png' />
         <div className='absolute'>
           <img className='w-full' src='img/covercrop.png' />
+          <img className='w-full' src='img/covercrop.png' />
           <div className='flex flex-col items-center justify-center space-y-2 pb-8'>
             <div className='font-IBMPlex font-bold sm:text-lg md:text-xl lg:text-2xl xl:text-3xl pt-10 pb-2 max-w-4xl px-10 text-center flex flex-wrap justify-center'>
               <span>การสอบแข่งขันคณิตศาสตร์</span>
