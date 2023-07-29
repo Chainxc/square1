@@ -175,8 +175,8 @@ export default function Home() {
           src='img/coverbg.png'
         />
         <div className='absolute justify-center'>
-          <img className='w-1/2 h-1/2 justify-self-center object-center' src='img/SQ15-col.png' />
-        </div>
+          <img className='left-1/2 w-1/2 h-1/2 justify-self-center object-center' src='img/SQ15-col.png' />/
+        </div> 
         <div className='absolute'>
           <img className='w-full' src='img/covercrop.png' />
           <div className='flex flex-col items-center justify-center space-y-2 pb-8'>
