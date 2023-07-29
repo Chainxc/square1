@@ -170,9 +170,9 @@ export default function Home() {
         <title>MWIT Square 14th</title>
       </Head>
       <main className='' data-theme='sq'>
-        <div className='fixed object-none object-left h-full'
-        style={{
-          backgroundImage: 'img/coverbg.png',}}  
+        <div className='bg-auto bg-no-repeat bg-center'
+        style="
+          background-image: url('img/coverbg.png')"
         >
           <img className='w-auto' src='img/SQ15-col.png'/>
           <div className='flex flex-col items-center justify-center space-y-2 pb-8'>
