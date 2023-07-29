@@ -174,7 +174,7 @@ export default function Home() {
           className='fixed object-none object-left h-full'
           src='img/coverbg.png'
         />
-        <img className='absolute h-1/2' src='img/SQ15-col.png' />
+        <img className='absolute h-1/2 justify-self-center self-center' src='img/SQ15-col.png' />
         <div className='absolute'>
           <img className='w-full' src='img/covercrop.png' />
           <div className='flex flex-col items-center justify-center space-y-2 pb-8'>
