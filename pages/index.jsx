@@ -63,7 +63,7 @@ const share = [
 const ctInfo = [
   {
     icon: faCalendarDay,
-    text: 'แข่งขันวันเสาร์ที่ 25 สิงหาคม 2565 ในรูปแบบออนไซต์',
+    text: 'แข่งขันวันศุกร์ที่ 25 สิงหาคม 2566 ในรูปแบบออนไซต์',
   },
   {
     icon: faPeopleGroup,
@@ -75,16 +75,11 @@ const ctInfo = [
   },
   {
     icon: faTrophy,
-    text: 'ได้รับเกียรติบัตรและทุนการศึกษาสูงสุด 5,000 บาท',
+    text: 'ได้รับถ้วยรางวัลพร้อมเกียรติบัตรและทุนการศึกษาสูงสุด 6,000 บาท',
   },
 ]
 
 const doc = [
-  {
-    icon: faImagePortrait,
-    text: 'รูปถ่ายนักเรียน',
-    desc: 'และรูปอาจารย์ผู้คุมทีม',
-  },
   {
     icon: faIdCard,
     text: 'รูปถ่ายบัตรนักเรียน',
@@ -223,7 +218,7 @@ export default function Home() {
               </div>
               <a
                 className='ds-btn ds-btn-sm ds-btn-secondary hover:scale-105 transition-all duration-200 font-IBMPlex font-bold md:ds-btn-md md:text-xl lg:ds-btn-lg lg:text-2xl space-x-2'
-                href='download/รายละเอียดการสอบ_MWIT_Square_14th.pdf'
+                href='download/รายละเอียดการสอบ_MWIT_Square_15th.pdf'
                 target='_blank'
                 rel='noopener noreferrer'
               >
@@ -351,7 +346,7 @@ export default function Home() {
               </div>
               <span className='font-IBMPlexLoop text-sm md:text-base lg:text-xl'>
                 {!endReg
-                  ? 'รับสมัครถึง 18 สิงหาคม 2566'
+                  ? 'รับสมัครถึง 16 สิงหาคม 2566'
                   : 'แข่งขัน 26 สิงหาคม 2566'}
               </span>
             </div>
