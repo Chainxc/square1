@@ -189,7 +189,7 @@ export default function Home() {
             </div>
             <div className='w-full px-4 flex flex-col items-center gap-2 md:gap-4'>
               <div className='flex flex-wrap gap-2 md:gap-4 justify-center md:mt-2'>
-                <Link
+                {/*<Link
                   href={
                     'download/ระเบียบการสอบ_MWIT_Square_14th_และคู่มือการใช้งานโปรแกรม_Google.pdf'
                   }
@@ -205,10 +205,10 @@ export default function Home() {
                       NEW!
                     </div>
                   </a>
-                </Link>
+                </Link>*/}
                 <Link
                   href={
-                    'download/รายชื่อผู้มีสิทธิ์เข้าแข่งขัน_MWIT_Square_14th.pdf'
+                    'https://forms.gle/B3Y3TK4QwZfBcBUCA'
                   }
                 >
                   <a
@@ -351,7 +351,7 @@ export default function Home() {
               </div>
               <span className='font-IBMPlexLoop text-sm md:text-base lg:text-xl'>
                 {!endReg
-                  ? 'รับสมัครถึง 16 สิงหาคม 2566'
+                  ? 'รับสมัครถึง 18 สิงหาคม 2566'
                   : 'แข่งขัน 26 สิงหาคม 2566'}
               </span>
             </div>
