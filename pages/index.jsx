@@ -149,8 +149,8 @@ export default function Home() {
   useEffect(() => {
     const timer = setInterval(() => {
       const endRegistTime =
-        Date.parse('16 Aug 2023 23:59:59 GMT+7') - new Date()
-      const testTime = Date.parse('26 Aug 2023 08:00:00 GMT+7') - new Date()
+        Date.parse('18 Aug 2023 23:59:59 GMT+7') - new Date()
+      const testTime = Date.parse('25 Aug 2023 08:00:00 GMT+7') - new Date()
       setRemainTime(endRegistTime >= 0 ? endRegistTime : testTime)
       setEndReg(endRegistTime < 0)
     }, 100)
@@ -346,8 +346,8 @@ export default function Home() {
               </div>
               <span className='font-IBMPlexLoop text-sm md:text-base lg:text-xl'>
                 {!endReg
-                  ? 'รับสมัครถึง 16 สิงหาคม 2566'
-                  : 'แข่งขัน 26 สิงหาคม 2566'}
+                  ? 'รับสมัครถึง 18 สิงหาคม 2566'
+                  : 'แข่งขัน 25 สิงหาคม 2566'}
               </span>
             </div>
             {/*<div className='max-w-7xl pt-5 px-4 space-y-4 text-center'>
