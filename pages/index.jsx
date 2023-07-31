@@ -167,9 +167,9 @@ export default function Home() {
       <main className='' data-theme='sq'>
         <img
           className='fixed object-none object-left h-full'
-          src='img/coverbg.png'
+          src='img/coverbg.jpg'
         />
-        <div className='absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+        <div className='absolute top-20 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
           <img className='' src='img/SQ15-col.png' />/
         </div> 
         <div className='absolute'>
