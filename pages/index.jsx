@@ -391,7 +391,7 @@ export default function Home() {
                 เอกสารที่ต้องใช้
               </span>
               <div className='w-full' />
-              <div className='grid grid-cols-2 md:grid-cols-3 w-full max-w-4xl pt-4 px-8 gap-4 gap-y-8'>
+              <div className='grid grid-cols-2 md:grid-cols-2 w-full max-w-4xl pt-4 px-8 gap-4 gap-y-8'>
                 {doc.map((t, idx) => (
                   <div
                     className={
