@@ -163,6 +163,10 @@ export default function Home() {
     <>
       <Head>
         <title>MWIT Square 15 th</title>
+        <meta
+          property='og:image'
+          content='img/thumb2023.png'
+        />
       </Head>
       <main className='' data-theme='sq'>
         <img
@@ -279,7 +283,7 @@ export default function Home() {
             <div className='w-full' />
             <div className='max-w-7xl pt-5 px-4 space-y-4 text-center'>
               <span className='text-xl md:text-2xl lg:text-4xl font-IBMPlex font-bold'>
-                {'สมัครได้อีก'}
+                {'เหลือเวลาเปิดลงทะเบียน'}
               </span>
               {/*<span className='text-xl md:text-2xl lg:text-4xl font-IBMPlex font-bold'>
                 ผลการแข่งขันรอบชิงชนะเลิศ
