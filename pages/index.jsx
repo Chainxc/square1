@@ -163,10 +163,6 @@ export default function Home() {
     <>
       <Head>
         <title>MWIT Square 15 th</title>
-        <meta
-          property='og:image'
-          content='img/thumb2023.png'
-        />
       </Head>
       <main className='' data-theme='sq'>
         <img
