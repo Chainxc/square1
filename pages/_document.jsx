@@ -13,11 +13,11 @@ export default function Document() {
         <meta property='og:url' content='https://square.mwit.ac.th' />
         <meta
           property='og:description'
-          content='MWIT Square 15th • การสอบแข่งขันคณิตศาสตร์และวิทยาศาสตร์ระหว่างโรงเรียนระดับมัธยมศึกษาตอนต้นประจำปี พ.ศ. 2565 | MWIT Open House 2023'
+          content='MWIT Square 15th • การสอบแข่งขันคณิตศาสตร์และวิทยาศาสตร์ระหว่างโรงเรียนระดับมัธยมศึกษาตอนต้นประจำปี พ.ศ. 2566 | MWIT Open House 2023'
         ></meta>
         <meta 
           property='og:image'
-          content='img/thumb2023.png'
+          content='/img/thumb2023.png'
         />
 
         <meta name='twitter:card' content='summary_large_image' />
@@ -26,11 +26,11 @@ export default function Document() {
         <meta name='twitter:title' content='MWIT Square 15th' />
         <meta
           name='twitter:description'
-          content='MWIT Square 15th • การสอบแข่งขันคณิตศาสตร์และวิทยาศาสตร์ระหว่างโรงเรียนระดับมัธยมศึกษาตอนต้นประจำปี พ.ศ. 2565 | MWIT Open House 2023'
+          content='MWIT Square 15th • การสอบแข่งขันคณิตศาสตร์และวิทยาศาสตร์ระหว่างโรงเรียนระดับมัธยมศึกษาตอนต้นประจำปี พ.ศ. 2566 | MWIT Open House 2023'
         />
         <meta
           name='twitter:image'
-          content='img/thumb2023.png'
+          content='/img/thumb2023.png'
         />
 
         <link rel='icon' href='/favicon.ico' />
