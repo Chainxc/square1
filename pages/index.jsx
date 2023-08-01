@@ -162,15 +162,15 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>MWIT Square 14th</title>
+        <title>MWIT Square 15 th</title>
       </Head>
       <main className='' data-theme='sq'>
         <img
-          className='fixed object-none object-left h-full'
+          className='fixed object-none object-left bg-repeat w-full h-screen '
           src='img/coverbg.png'
         />
         <div className='absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-          <img className='' src='img/SQ15-col.png' />/
+          <img className='' src='img/SQ15-col.png' />
         </div> 
         <div className='absolute'>
           <img className='w-full' src='img/covercrop.png' />
