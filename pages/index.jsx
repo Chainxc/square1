@@ -162,7 +162,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>MWIT Square 15 th</title>
+        <title>MWIT Square 15th</title>
       </Head>
       <main className='' data-theme='sq'>
         <img
