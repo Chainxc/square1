@@ -15,7 +15,7 @@ export default function Document() {
           property='og:description'
           content='MWIT Square 15th • การสอบแข่งขันคณิตศาสตร์และวิทยาศาสตร์ระหว่างโรงเรียนระดับมัธยมศึกษาตอนต้นประจำปี พ.ศ. 2565 | MWIT Open House 2023'
         ></meta>
-        <meta
+        <meta 
           property='og:image'
           content='img/thumb2023.png'
         />
