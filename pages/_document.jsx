@@ -17,7 +17,7 @@ export default function Document() {
         ></meta>
         <meta 
           property='og:image'
-          content='/img/thumb2023.png'
+          content='https://square.mwit.ac.th/img/thumb2023.png'
         />
 
         <meta name='twitter:card' content='summary_large_image' />
@@ -30,7 +30,7 @@ export default function Document() {
         />
         <meta
           name='twitter:image'
-          content='/img/thumb2023.png'
+          content='https://square.mwit.ac.th/img/thumb2023.png'
         />
 
         <link rel='icon' href='/favicon.ico' />
