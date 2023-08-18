@@ -75,7 +75,7 @@ const ctInfo = [
   },
   {
     icon: faTrophy,
-    text: 'ได้รับถ้วยรางวัลพร้อมเกียรติบัตรและทุนการศึกษาสูงสุด 6,000 บาท',
+    text: 'ได้รับโล่รางวัลพร้อมเกียรติบัตรและทุนการศึกษาสูงสุด 6,000 บาท',
   },
 ]
 
@@ -184,9 +184,9 @@ export default function Home() {
             </div>
             <div className='w-full px-4 flex flex-col items-center gap-2 md:gap-4'>
               <div className='flex flex-wrap gap-2 md:gap-4 justify-center md:mt-2'>
-                {/*<Link
+                <Link
                   href={
-                    'download/ระเบียบการสอบ_MWIT_Square_14th_และคู่มือการใช้งานโปรแกรม_Google.pdf'
+                    'download/ระเบียบการแข่งขัน MWIT Square 15th.pdf'
                   }
                 >
                   <a
@@ -195,13 +195,13 @@ export default function Home() {
                     rel='noopener noreferrer'
                   >
                     <FontAwesomeIcon icon={faFileInvoice} />
-                    <span>ระเบียบการสอบ</span>
+                    <span>ระเบียบการแข่งขัน</span>
                     <div className='absolute rotate-[5deg] -right-2 md:-right-3 -top-3 text-[0.65rem] md:text-sm lg:text-[0.95rem] py-[0.15rem] sm:py-1 px-2 rounded-full text-white bg-primary'>
                       NEW!
                     </div>
                   </a>
-                </Link>*/}
-                <Link
+                </Link>
+                {/*<Link
                   href={
                     'https://forms.gle/B3Y3TK4QwZfBcBUCA'
                   }
@@ -214,7 +214,7 @@ export default function Home() {
                     <FontAwesomeIcon icon={faClipboardCheck} />
                     <span>ลงทะเบียนเข้าแข่งขัน</span>
                   </a>
-                </Link>
+                </Link>*/}
               </div>
               <a
                 className='ds-btn ds-btn-sm ds-btn-secondary hover:scale-105 transition-all duration-200 font-IBMPlex font-bold md:ds-btn-md md:text-xl lg:ds-btn-lg lg:text-2xl space-x-2'
@@ -223,7 +223,7 @@ export default function Home() {
                 rel='noopener noreferrer'
               >
                 <FontAwesomeIcon icon={faFileLines} />
-                <span>รายละเอียดการสอบ</span>
+                <span>รายละเอียดการแข่งขัน</span>
               </a>
             </div>
             <div className='w-full' />
@@ -275,11 +275,11 @@ export default function Home() {
                   </a>
                 </li>
               </ul>
-            </div>
+              </div>
             <div className='w-full' />
             <div className='max-w-7xl pt-5 px-4 space-y-4 text-center'>
               <span className='text-xl md:text-2xl lg:text-4xl font-IBMPlex font-bold'>
-                {'เหลือเวลาลงทะเบียน'}
+                {'ถึงเวลาแข่งขันในอีก'}
               </span>
               {/*<span className='text-xl md:text-2xl lg:text-4xl font-IBMPlex font-bold'>
                 ผลการแข่งขันรอบชิงชนะเลิศ
@@ -347,7 +347,7 @@ export default function Home() {
               <span className='font-IBMPlexLoop text-sm md:text-base lg:text-xl'>
                 {!endReg
                   ? 'รับสมัครถึง 18 สิงหาคม 2566'
-                  : 'แข่งขัน 25 สิงหาคม 2566'}
+                  : 'แข่งวันที่ 25 สิงหาคม 2566'}
               </span>
             </div>
             {/*<div className='max-w-7xl pt-5 px-4 space-y-4 text-center'>
