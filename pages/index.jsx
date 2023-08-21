@@ -201,6 +201,23 @@ export default function Home() {
                     </div>
                   </a>
                 </Link>
+                <Link
+                  href={
+                    'download/รายชื่อผู้มีสิทธิ์เข้าร่วมการแข่งขัน MWIT Square ครั้งที่ 15.pdf'
+                  }
+                >
+                  <a
+                    className='relative ds-btn ds-btn-sm text-white bg-gradient-to-r from-pa to-pb hover:scale-105 transition-all duration-200 font-IBMPlex font-semibold md:ds-btn-md md:text-xl lg:ds-btn-lg lg:text-2xl space-x-2'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    <FontAwesomeIcon icon={faFileInvoice} />
+                    <span>รายชื่อผู้มีสิทธิ์เข้าแข่งขัน</span>
+                    <div className='absolute rotate-[5deg] -right-2 md:-right-3 -top-3 text-[0.65rem] md:text-sm lg:text-[0.95rem] py-[0.15rem] sm:py-1 px-2 rounded-full text-white bg-primary'>
+                      NEW!
+                    </div>
+                  </a>
+                </Link>
                 {/*<Link
                   href={
                     'https://forms.gle/B3Y3TK4QwZfBcBUCA'
